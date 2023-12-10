@@ -1,0 +1,22 @@
+<h1>Campeonato Brasileiro 2023</h1>
+
+<table class="styled-table">
+  <thead>
+    <th>Posição</th>
+    <th>Escudo</th>
+    <th>Time</th>
+    <th>Pontos</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let time of tabela | async">
+      <td>{{time.posicao}}</td>
+      <td><img class="escudo" src="{{time.time.escudo}}" alt=""></td>
+      <td>{{time.time.nome_popular}}</td>
+      <td>{{time.pontos}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+  {{tabela | async | json}}
+</pre>
